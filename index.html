@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AlgoSparks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Josefin Sans", sans-serif; color: #4CD4CB; font-weight: 600;
+        }
+
+        html,
+        body {
+            font-family: "Lexend", sans-serif
+        }
+
+        .w3-sidebar {
+            z-index: 3;
+            width: 250px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+                href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button "><img src="theory\images\AlgoSparks-2.png" alt="logo"
+                    width="100" height="30"></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Algorithm Visualizer</a>
+            <a href="theory\nQueen.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">theory</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Visualizer</a>
+            <a href="https://uv7l0bwgt6x.typeform.com/to/fbmGzmQf" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Quiz</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Forum</a>
+
+
+
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h2 class="w3-bar-item"><b>Contents</b></h2>
+        <h3 class="w3-bar-item">Modules</h3>
+        <a class="w3-bar-item w3-button w3-hover-black" href="index.html">Algorithms</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Approach of Solving</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Types</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Brute</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Recursive</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Divide & Conquer</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Greedy</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Backtracking</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Dynamic</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Pattern</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Recursive</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Analysis</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="theory\nQueen.html">n-Queen Problem</a>
+
+        <h3 class="w3-bar-item">Visualizers</h3>
+
+        <a class="w3-bar-item w3-button w3-hover-black" href="searching\linear.html">Linear Search</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="searching\binary.html">Binary Search</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="sorting\selection.html">Selection Sort</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="string_matching\stringmatching.html">String Matching</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="LCS\LCS.html">LCS</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">n-Queen Problem</a>
+
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">Algorithms</h1>
+                <p align="justify">An algorithm is a procedure that takes in input, follows a certain set of steps, and
+                    then produces an
+                    output. Oftentimes, the algorithm defines a desired relationship between the input and output. For
+                    example, if the problem that we are trying to solve is sorting a hand of cards, the problem might be
+                    defined as follows:</p>
+                <p align="justify"><b>Definition:</b><br>
+                    Problem: Sort the input.<br>
+                    Input: A set of 5 cards.<br>
+                    Output: The set of 5 input cards, sorted.<br>
+                    Procedure: Up to the designer of the algorithm!!</p>
+
+                <p align="justify">This last part is very important, it's the meat and substance of the algorithm. And,
+                    as an algorithm
+                    designer, you can do whatever you want to produce the desired output! Think about some ways you
+                    could sort 5 cards in your hand, and then click below to see some more ideas.
+
+                    The study of algorithms involves finding the best ways to achieve the desired output given an input
+                    and a goal. Learning about algorithms is essential to being a successful computer programmer, and
+                    understanding them can help give you an idea of how computers work. So, if you'd like to learn to
+                    code, it's absolutely essential to learn about algorithms.</p>
+
+                <br>
+                <p align="center"><img src="theory\images\algo 4.jfif" style="border: 2px solid #000000; height:300px; width: 500px;"></p>
+
+
+
+
+            </div>
+
+
+            <div class="w3-third w3-container">
+                <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+                <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">Algorithms and Computers</h2>
+                <p align="justify">
+                    Even though algorithms existed before the modern computer, they lie at the heart of computing and
+                    technology. Everything you've ever done on any piece of technology relies on algorithms because they
+                    tell technology what to do. Algorithms are responsible for your ability to surf the web at tolerable
+                    speeds. Imagine that you're visiting a website, and that website has a lot of unsorted content to
+                    show you. If it randomly picked a content order every time you visited it, and threw that order away
+                    and tried again if it wasn't correct, you'd be waiting for minutes, hours, or even days before your
+                    web page loaded!</p>
+
+
+                <p align="justify">Studying computer science and computer programming always involves algorithms because
+                    the study of
+                    algorithms teaches you to think like a machine so that you can program them in the best way
+                    possible. If you'd like to learn how to write applications, make websites, or do data analysis, you
+                    need to know about algorithms so that your code will run fast and run correctly.</p>
+
+                <p align="justify">On the theoretical side, many of the simpler algorithms have long since been
+                    discovered and heavily
+                    studied, but there are many areas left to research. For example, in theoretical computer science, a
+                    lingering question is whether P = NP, or in other words, "Are problems that can be quickly verified
+                    by a computer able to be quickly solved by a computer?" Currently, we don't think so. But if it
+                    turned out to be true, then computing and technology would experience an enormous speed increase
+                    that we would all benefit from. However, this would also mean that modern cryptography is not safe
+                    and any hacker could easily crack codes to any system in the world!</p>
+
+                <p align="justify">As computing grew, applications of computing grew along with it. In order to perform
+                    the algorithms
+                    that would enable those applications, computer scientists needed a way to represent and store that
+                    data. If we wanted to input a set of cards into a computer program, how would we store that data?
+                    How would we feed it into the algorithm? Early on, it was good enough to simply represent data as
+                    computer bits (zeroes and ones). However, that method could never last, it was too difficult and
+                    time-consuming.</p>
+
+                <p align="justify">Data structures were the answer. Their invention and research is paralleled by, and
+                    is often taught
+                    alongside, algorithms. The card sorting algorithm, for example, could take in an array of numbers to
+                    represent cards. More data structures were invented over time, and they allowed algorithm design to
+                    progress with them. With these in place, it became much easier to reason about, develop, and
+                    research algorithms.</p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+                <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">Properties of Algorithms</h2>
+                <p align="justify">Algorithms have 3 main properties that are important to remember during their design
+                    and analysis.
+                <ol>
+                    <li>
+                        <p align="justify">Time complexity. This is the time an algorithm takes to complete, and it is
+                            often given using
+                            big O notation with its input as the independent variable. For example, if we want to search
+                            a
+                            card in the sorted n cards, we can do in logarithmic time, and the time complexity would be
+                            O(log(n))</p>
+                    </li>
+                    <li>
+                        <p align="justify">Space complexity. This is the space (in computer memory) the algorithm uses
+                            during its
+                            execution. Again, if we're sorting n cards, and we need to make an extra array of size n for
+                            each card to do so, the space complexity would be O(log(n^2))</p>
+                    </li>
+                    <li>
+                        <p align="justify">Correctness. An algorithm is correct if and only if, for every input, it
+                            halts and outputs the
+                            correct output. Contrary to what you might think, algorithms that are not correct are
+                            sometimes
+                            useful. For example, partially correct algorithms only guarantee that if the algorithm
+                            halts,
+                            the answer will be correct.</p>
+                    </li>
+
+                </ol>
+                </p>
+                <p align="just">An algorithm can be expressed in a variety of ways, many of which you'll find in
+                    different wikis here on Brilliant. A few examples of how an algorithm can be described are as
+                    follows:
+                </p>
+                <p align="just">
+                <ol>
+                    <li>
+                        <p align="just">A high-level description: This might be in the form of text or prose that
+                            describes the algorithm: it's input, output, and goal. Generally, this does not involve
+                            implementation details of the algorithm.</p>
+                    </li>
+                    <li>
+                        <p align="just">Formal definition: A formal definition will often give the input and output
+                            of the algorithm in formal mathematical terms. The procedure by which the output is achieved
+                            is
+                            also formally notated. This is a more mathematical way of representing an algorithm.</p>
+                    </li>
+                    <li>
+                        <p align="just">Pseudo-code: This is a way of loosely formalizing an algorithm, and it is
+                            often used when learning algorithms. There are general implementation details; however
+                            language-specific details are left out so as not to complicate things.</p>
+                    </li>
+                    <li>
+                        <p align="just">Implementation: An implementation in a given language will be a piece of
+                            code that is understandable and runnable by a computer. It will fulfill the goals and
+                            procedure
+                            of the algorithm; however, it is harder to include high-level detail in an implementation
+                            because a computer will reject plain text.</p>
+                    </li>
+                </ol>
+
+                </p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">Types of Algorithms</h2>
+                <style>
+                    table,
+                    td,
+                    th {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                    }
+                </style>
+                <p align="justify"><i>Labels that describe function:</i></p>
+
+                <table width="100%">
+                    <tr>
+                        <th>
+                            Algorithm Label</th>
+                        <th>
+                            Description
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td>Sorting algorithms
+                        </td>
+                        <td>Sort a list of comparable inputs.
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Graph algorithms</td>
+                        <td>Perform elementary graph algorithms such as search.
+                        </td>
+
+                    <tr>
+                        <td>Shortest path algorithms</td>
+                        <td> Find the shortest path(s) between points in a graph.</td>
+                    </tr>
+
+                    <tr>
+                        <td>String matching algorithms </td>
+                        <td>Search larger pieces of text for input strings.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Max-flow algorithms</td>
+                        <td> Calculate the maximum flow in a flow network.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computational geometry algorithms
+                        </td>
+                        <td>A branch of algorithms that can be stated in terms of geometry</td>
+                    </tr>
+
+                    <tr>
+                        <td>Number-theoretic algorithms</td>
+                        <td>Algorithms that deal with number theory such as GCD</td>
+                    </tr>
+
+                    <tr>
+                        <td>Fast fourier transform algorithms</td>
+                        <td>Efficient algorithms that perform fourier transform</td>
+                    </tr>
+
+                    <tr>
+                        <td>Matrix algorithms</td>
+                        <td>Algorithms that perform operations on matrices</td>
+                    </tr>
+
+
+
+                    </tr>
+                </table>
+                </p>
+                </p>
+            </div>
+
+            <div class="w3-third w3-container">
+
+                <p align="center">
+                    <br><br><br><br>
+                    <img src="theory\images\Types of algo.jfif"
+                        style="border: 2px solid #000000; height: 115%; width: 100%"></p>
+
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-twothird  w3-container">
+                <h2 class="w3-text-teal">Approach of Solving</h2>
+                <p><i>Some apporach of thinking and solving a problems:</i></p>
+
+                <p align="justify">
+                <ul>
+                    <li>
+                        <p align="justify"><b>Divide and conquer algorithms:</b> Divide problem into smaller subproblems
+                            that can be recombined for an answer.</p>
+                    </li>
+                    <li>
+                        <p align="justify"><b>Greedy algorithms:</b> Simple, naive approaches to problems that typically
+                            return sub-optimal answers</p>
+                    </li>
+                    <li>
+                        <p align="justify"><b>Dynamic programming algorithms:</b> Create smaller subproblems whose
+                            answers help solve larger and larger subproblems.</p>
+                    </li>
+                    <li>
+                        <p align="justify"><b>Recursive algorithms:</b> Algorithms that continuously call upon
+                            themselves to solve smaller and smaller problems until a basis is formed for the final
+                            solution</p>
+                    </li>
+                    <li>
+                        <p align="justify"><b>Brute force algorithms:</b> An approach to solving problems that attemps
+                            to solve the problem with more computing power, rather than elegance</p>
+                    </li>
+                    <li>
+                        <p align="justify"><b>Backtracking algorithms:</b> Algorithms that build collections of partial
+                            candidates for solutions, forgetting them only when they become impossible</p>
+                    </li>
+                    <li>
+                        <p align="justify"><b>Probabilistic and randomized algorithms:</b> Algorithms that use any form
+                            of randomization (also called non-deterministic algorithms)</p>
+                    </li>
+                    <li>
+                        <p align="justify"><b>Approximation algorithms:</b> Methods that attempt to cut down on
+                            computation time by making approximations, getting within some factor of the optimal answer
+                        </p>
+                    </li>
+                    <li>
+                        <p align="justify"><b>Multi-threaded algorithms:</b> Algorithms that run on multiple threads to
+                            parallelize work</p>
+                    </li>
+                    <li>
+                        <p align="justify"><b>Linear programming algorithms:</b> Solutions that achieve optimal answers
+                            by using linear relationships of the inputs</p>
+                    </li>
+
+
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">Designing an Algorithm</h2>
+                <p align="justify">When designing an algorithm, it is important to remember that computers are not
+                    infinitely fast and that computer memory is not infinitely large. That's why we make algorithms,
+                    after all. So, maybe you're designing an algorithm for a computer that is super fast but doesn't
+                    have much memory. Maybe you'll make some concessions on the computational requirements so that you
+                    can save memory.</p>
+
+                <p align="justify">But even if you never had to worry about speed or space, you still need to design a
+                    good algorithm. Why? You need to design a good algorithm because you need to know that the algorithm
+                    will do what you want it to do and that it will stop once it's done. You need to know that it will
+                    be correct.</p>
+
+                <p align="justify"><b>Efficacy</b><br>
+
+                    The efficacy of the algorithm you're designing comes down to time complexity and space complexity.
+                    In an ideal world, the algorithm is efficient in both ways, but there is sometimes a tradeoff
+                    between them. It is up to the designer to weigh their needs appropriately in order to strike a
+                    balance.</p>
+
+                <p align="justify">It is also up to the designer to make a good algorithm. Doing so requires an
+                    understanding of algorithms as well as an understanding of existing algorithms to guide your design
+                    process. Otherwise, they might find themselves with a bad algorithm.</p>
+
+            </div>
+        </div>
+
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">Analyzing and Evaluating an Algorithm</h2>
+                <p align="justify">The analysis and evaluation of an algorithm is a two-step process. In the analysis
+                    portion, the algorithm is studied to learn about its properties: time/space complexity and
+                    correctness. Any method of describing the algorithm, as enumerated above, can be studied. However,
+                    that description must contain enough information about the inner workings of the algorithm to
+                    provide a clear picture of its procedure.</p>
+
+                <p align="justify">In general, there are a few ways to describe time complexity. There's the best-case,
+                    the average-case, and the worst-case for the algorithm. As a programmer, it's important to know each
+                    case so that you fully understand how your algorithm will operate. Which case you focus on is up to
+                    you, but the worst-case performance is often used as a benchmark for algorithms.</p>
+
+                <p align="justify">The evaluation portion is more qualitative and requires the observer to make
+                    decisions about the efficacy of the algorithm on its own, and as it relates to other similar
+                    algorithms. You might see the algorithm and notice that it is making some critical errors that
+                    increase its runtime. You might also discover that its runtime is drastically different than other
+                    algorithms that accomplish the same thing. In either case, the evaluation result is poor.</p>
+
+                <p align="justify">Let's take a look at the pseudo-code for an algorithm and try to analyze its time
+                    complexity. The following pseudo-code is that of insertion sort, a basic sorting algorithm. It takes
+                    as its input an array A, of the number and returns that same array, sorted. Note that this
+                    pseudo-code assumes 1-indexing (the first index in the array is 1, not 0).
+                </p>
+
+                <div class="w3-row">
+                    <div class=" w3-container">  
+                 <div align="center" ><button data-tf-popup="fbmGzmQf" data-tf-opacity="100" data-tf-size="100" data-tf-iframe-props="title=Algorithms" data-tf-transitive-search-params data-tf-medium="snippet" style=" align-self: center; all:unset;font-family: Lexend, sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#4CD4CB;color:#000000;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Click to start the Quiz</button><script src="//embed.typeform.com/next/embed.js"></script>
+                 </div> 
+                </div>
+            </div>
+            </div>
+        </div>
+
+        
+      
+
+        <!-- Pagination -->
+        <div class="w3-center w3-padding-32">
+            <div class="w3-bar">
+                <a class="w3-button w3-black" href="index.html">1</a>
+                <a class="w3-button w3-hover-black" href="theory\nQueen.html">2</a>
+                <a class="w3-button w3-hover-black" href="#">3</a>
+                <a class="w3-button w3-hover-black" href="#">4</a>
+                <a class="w3-button w3-hover-black" href="#">5</a>
+                <a class="w3-button w3-hover-black" href="#">»</a>
+            </div>
+        </div>
+
+        <!-- END MAIN -->
+    </div>
+
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+
+    
+    
+
+</body>
+
+</html>
