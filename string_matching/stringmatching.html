@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <link rel="stylesheet" href="./stringmatching.css">
+
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+
+    <title>String Matching Algo</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 align="center">String Matching Algorithm Visualiser</h1>
+       </header>
+
+       <div> <br> <br></div>
+
+       <div id="app" >
+
+       
+
+        <form @submit.prevent="onSubmit">
+            <div class="form-group">
+                <label for="algorithm">Algorithm</label>
+                <select class="form-control w-auto" id="algorithm" v-on:change="start" v-model="algorithm">
+                    <option v-for="algo in algorithmList" v-bind:value=algo[0]>{{algo[1]}}</option>
+                </select>
+                
+            </div>
+            <div class="form-group">
+            
+                <label for="searchtext">Text to search</label>
+                <input id="searchtext" class="form-control" v-model="textInput" type="text" />
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="pattern">Search pattern</label>
+                <input id="pattern" class="form-control w-auto" v-model="patternInput" type="text" size="20" />
+            </div>
+
+
+        </form>
+
+        <div class="display-area">
+
+            <table class="strings">
+                <tr class="label-row">
+                    <td class="row-label">i: </td>
+                    <td v-for="i in n" v-bind:class=textClass(i)>{{ i - 1 }}</td>
+                </tr>
+                <tr>
+                    <td class="row-label">Text:</td>
+                    <td v-for="i in n" v-bind:class=textClass(i)>{{ text[i - 1] }}</td>
+                </tr>
+                <tr>
+                    <td class="row-label">Pattern:</td>
+                    <td v-for="i in n" v-bind:class=patternClass(i)>{{ patternChar(i - 1) }}</td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="buttons">
+            <button type="button" class="btn btn-primary" v-on:click="previous"
+                v-bind:disabled=previousDisabled>Previous</button>
+            <button type="button" class="btn btn-primary" v-on:click="next" v-bind:disabled=nextDisabled>Next</button>
+
+        </div>
+
+        <script data-main="build/stringmatching.js" src="./require.js"></script>
+</body>
+
+</html>

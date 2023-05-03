@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AlgoSparks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8306858446960380"
+     crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="images\Favicon.png">
+
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Josefin Sans", sans-serif; color: #4CD4CB; font-weight: 600;
+        }
+
+        html,
+        body {
+            font-family: "Lexend", sans-serif
+        }
+
+        .w3-sidebar {
+            z-index: 3;
+            width: 250px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+                href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button "><img src="images\AlgoSparks-2.png" alt="logo" width="100" height="30"></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Algorithm Visualizer</a>
+            <a href="nQueen.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">theory</a>
+            <a href="searching\linear.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Visualizer</a>
+            <a href="https://uv7l0bwgt6x.typeform.com/to/fbmGzmQf" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Quiz</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Forum</a>
+
+
+
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h2 class="w3-bar-item"><b>Contents</b></h2>
+        <h3 class="w3-bar-item">Modules</h3>
+        <a class="w3-bar-item w3-button w3-hover-black" href="index.html">Algorithms</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Approach of Solving</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Types</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Brute</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Recursive</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Divide & Conquer</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Greedy</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Backtracking</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Dynamic</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Pattern</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Recursive</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Analysis</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="nQueen.html">n-Queen Problem</a>
+
+        <h3 class="w3-bar-item">Visualizers</h3>
+
+        <a class="w3-bar-item w3-button w3-hover-black" href="searching\linear.html">Linear Search</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="searching\binary.html">Binary Search</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="sorting\selection.html">Selection Sort</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="string_matching\stringmatching.html">String Matching</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="LCS\LCS.html">LCS</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">n-Queen Problem</a>
+
+
+
+
+
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+
+
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">n-Queen Problem</h1>
+                <p align="justify">The n queen problem is solved using a backtracking algorithm, where the board is
+                    recursively filled with queens, one at a time, and backtracked if no valid solution is found. At each step, the
+                    algorithm checks if the newly placed queen conflicts with any previously placed queens, and
+                    backtracks if a conflict is found. The process continues until all N queens are placed on the board
+                    without conflicts, or all possible solutions have been explored. The resulting board represents a
+                    valid solution to the N queen problem.</p>
+                <br>
+                <br>
+
+                <p align="center"><img src="images\Eight-queens-animation.gif" style="border: 2px solid #000000;"></p>
+
+
+
+            </div>
+            <div class="w3-third w3-container">
+                <p class="w3-border w3-padding-large w3-padding-32 w3-center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8306858446960380"
+                    crossorigin="anonymous"></script></p>
+                <p class="w3-border w3-padding-large w3-padding-64 w3-center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8306858446960380"
+                    crossorigin="anonymous"></script></p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">What is Backtracking?</h2>
+                <p align="justify">Backtracking is a problem-solving technique that involves recursively trying out
+                    different solutions to a problem, and backtracking or undoing previous choices when they dont lead
+                    to a valid solution. It is commonly used in algorithms that search for all possible solutions to a
+                    problem, such as the famous eight-queens puzzle. Backtracking is a powerful and versatile technique
+                    that can be used to solve a wide range of problems.</p>
+
+
+                <p align="justify">Backtracking is often used in constraint satisfaction problems, such as the N Queen
+                    problem, where we need to find a solution that satisfies a set of constraints. In these problems, we
+                    start by choosing a value for one of the variables and checking if it satisfies the constraints. If
+                    it does, we move on to the next variable and repeat the process. If the current value does not
+                    satisfy the constraints, we backtrack to the previous variable and try a different value.</p>
+
+                <p align="justify">Backtracking is an effective technique for solving problems, as it allows us to
+                    incrementally build a solution and avoids the need to consider all possible solutions from scratch.
+                    However, it can also be time-consuming, as it requires many iterations and checks. To make
+                    backtracking more efficient, various optimization techniques, such as constraint propagation and
+                    heuristics, can be used.</p>
+
+
+            </div>
+            <div class="w3-third w3-container">
+                <p class="w3-border w3-padding-large w3-padding-32 w3-center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8306858446960380"
+                    crossorigin="anonymous"></script></p>
+                <p class="w3-border w3-padding-large w3-padding-64 w3-center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8306858446960380"
+                    crossorigin="anonymous"></script></p>
+            </div>
+        </div>
+
+
+        <div class="w3-row ">
+            <div class="w3-twothird w3-container">
+                <h3 class="w3-text-teal">Problem Statement</h3>
+                <p align="justify"><i>How can n queens be placed on an nxn chessboard so that no two of them attack each
+                        other.</i>
+                </p>
+
+                <h3 class="w3-text-teal">Solution to the n-Queens Problem</h3>
+                <p align="justify">The way we try to solve this is by placing a queen at a position and trying to rule
+                    out the possibility of it being under attack. We place one queen in each row/column. If we see that
+                    the queen is under attack at its chosen position, we try the next position. If a queen is under
+                    attack at all the positions in a row, we backtrack and change the position of the queen placed prior
+                    to the current position. We repeat this process of placing a queen and backtracking until all the N
+                    queens are placed successfully.</p>
+
+
+
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">Algorithms</h2>
+
+                <p align="justify">Following is the algorithm for the n-Queens problem:</p>
+                <p align="justify">
+                <ul>
+                    <li>
+                        <p align="justify">Start in the leftmost column</p>
+                    </li>
+                    <li>
+                        <p align="justify">If all queens are placed, return true
+                        </p>
+                    </li>
+                    <li>
+                        <p align="justify">Try all rows in the current column. For each row:</p>
+                    </li>
+                    <li>
+                        <p align="justify">If the queen can be placed safely in this row, mark this cell and
+                            recursively try placing the rest of the queen</p>
+                    </li>
+                    <li>
+                        <p align="justify">b. If placing the queen in this row leads to an unsafe configuration,
+                            unmark the cell and try the next row</p>
+                    </li>
+                    <li>
+                        <p align="justify">If all rows have been tried and nothing worked, return false to trigger
+                            backtracking</p>
+                    </li>
+                    </p>
+            </div>
+        </div>
+
+        <div class="w3-row ">
+            <div class="w3-twothird  w3-container">
+                <h2 class="w3-text-teal">Approaches to Solve n Queen Problem</h2>
+                <p><i>Below we have discussed approaches to solve the N Queen Problem</i></p>
+
+                <h3 class="w3-text-teal">Approach 1: Naive Approach to Solve N Queen Problem</h3>
+
+                <p align="justify"> The naive approach is to generate all possible configurations of queens on board and
+                    print a configuration that satisfies the given constraints. We generate all possible configurations
+                    and one by one check if a configuration satisfies the given constraints or not. For every checked
+                    configuration, we check if queens in this configuration can attack each other or not. If we find a
+                    configuration satisfying the given constraints, we print it.</p>
+
+                    <div class="box">
+                    <pre style="padding: 10px; border: 2px solid black;">
+                        <code >
+                            while there are unexplored configurations.
+                                {
+                                generate the next configuration
+                                if queens don't attack in this configuration then
+                                    {
+                                        print this configuration;
+                                    }
+                                }</code>
+                        </pre>
+                    </div>
+
+                <h3 class="w3-text-teal">Approach 2: Backtracking Algorithm to Solve N Queen Problem</h3>
+
+                <p align="justify">By using backtracking we position queens in different columns one by one, beginning
+                    with the leftmost column. When we position a queen in a column, we look for clashes with other
+                    queens that have already been placed. If we locate a row in the current column with no collision, we
+                    mark this row and column as part of the solution. We backtrack and return false if we cannot
+                    discover such a row due to clashes.</p>
+
+                    <div class="box">
+                        <code>
+                            <pre  style="padding: 10px; border: 2px solid black;" >
+                                function solveNQueens(board, col, n):
+                                    if col >= n:
+                                        print board
+                                        return true
+                                    for row from 0 to n-1:
+                                        if isSafe(board, row, col, n):
+                                        board[row][col] = 1
+                                        if solveNQueens(board, col+1, n):
+                                            return true
+                                        board[row][col] = 0
+                                    return false
+
+                                    function isSafe(board, row, col, n):
+                                    for i from 0 to col-1:
+                                        if board[row][i] == 1:
+                                        return false
+                                    for i,j from row-1, col-1 to 0, 0 by -1:
+                                        if board[i][j] == 1:
+                                        return false
+                                    for i,j from row+1, col-1 to n-1, 0 by 1, -1:
+                                        if board[i][j] == 1:
+                                        return false
+                                    return true
+
+                                    board = empty NxN chessboard
+                                    solveNQueens(board, 0, N)
+                            </pre>
+                        </code>
+                    </div>
+
+                <h3 class="w3-text-teal">Approach 3: Backtracking with optimization</h3>
+
+                <p align="justify">The reason behind the N queen problem approach is that instead of checking every
+                    element in the right and left diagonals, we can use the property of diagonals:
+                <ol>
+                    <li>
+                        <p align="justify">For each right diagonal, the sum of I and j is constant and unique, where i
+                            represents row and j represents a column in the chess board.</p>
+                    </li>
+                    <li>
+                        <p align="justify">The difference between i and j is constant and unique for each left diagonal,
+                            where i and j represent the row and column of the chess board, respectively.</p>
+                    </li>
+                </ol>
+
+                </p>
+
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">Complexity Analysis</h2>
+                <p align="justify"><b>Time Complexity:</b> Since in each row we are iterating for N times and it costs
+                    O(1) time to check if placing the queen in a cell is valid. Therefore, the recurrence relation of
+                    the above algorithm is T(n)= n×T(n-1) which evaluates to O(N!) <br>
+                    <b>Space Complexity:</b> Since, we are using a 2-dimensional array of dimension n×n, therefore the
+                    overall time complexity is O(N^2). However, we can say that constant extra space is required to find
+                    the answer (if we do not account space needed to store the answer).
+                </p>
+
+            </div>
+        </div>
+
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">Conclusion</h2>
+                <p align="justify">In conclusion, the N queen problem is a challenging problem that can be solved using
+                    a backtracking algorithm. The problem requires careful consideration of the rules governing the
+                    placement of queens on a chessboard, and the backtracking algorithm provides an efficient way to
+                    search for all possible solutions. The N queen problem has practical applications in areas such as
+                    computer vision, where it can be used to solve problems such as object recognition and tracking. So,
+                    understanding how to solve the N queen problem using backtracking is an important skill for any
+                    programmer.</p>
+
+            </div>
+        </div>
+       
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">  
+         <div align="center" ><button align="center" data-tf-popup="fbmGzmQf" data-tf-opacity="100" data-tf-size="100" data-tf-iframe-props="title=Algorithms" data-tf-transitive-search-params data-tf-medium="snippet" style=" align-self: center; all:unset;font-family: Lexend, sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#4CD4CB;color:#000000;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Click to start the Quiz</button><script src="//embed.typeform.com/next/embed.js"></script>
+         </div> 
+        </div>
+    </div>
+    
+        <div class="w3-row ">
+            <div class="w3-twothird w3-container">
+                <h2 class="w3-text-teal">Frequently Asked Questions</h2>
+                <p><i>Below we have discussed some frequently asked questions regarding N Queen Problem</i></p>
+                <ol>
+                    <li>
+                        <p align="justify">What is the goal of the N Queen problem?<br>
+                            Ans: The goal of the N Queen problem is to find a configuration of the N queens on an NxN
+                            chessboard such that no two queens are attacking each other</p>
+                    </li>
+
+                    <li>
+                        <p align="justify">What is a valid solution to the N Queen problem?<br>
+                            Ans: A valid solution to the N Queen problem is a configuration of the N queens on an NxN
+                            chessboard such that no two queens are in the same row, column, or diagonal.</p>
+                    </li>
+                    <li>
+                        <p align="justify">What is the brute force approach to solving the N Queen problem?<br>
+                            Ans: The brute force approach to solving the N Queen problem involves trying all possible
+                            combinations of placing the N queens on the chessboard and checking if each combination
+                            satisfies the constraints (i.e., no two queens are in the same row, column, or diagonal).
+                        </p>
+                    </li>
+                    <li>
+                        <p align="justify">What is the backtracking approach to solving the N Queen problem?<br>
+                            Ans: The backtracking approach to solving the N Queen problem is a more efficient solution
+                            compared to the brute force approach. In this approach, we start by placing the first queen
+                            in the first row, then move to the next row and try to place the next queen, and so on. If
+                            we reach a point where it is not possible to place a queen, we backtrack and try a different
+                            position for the previous queen. We continue this process until we find a valid solution or
+                            all possibilities have been exhausted.</p>
+                    </li>
+                    <li>
+                        <p align="justify">How can I solve the n-Queen problem?<br>
+                            Ans: There are several algorithms to solve the n-Queen problem, such as backtracking,
+                            genetic algorithms, and simulated annealing. The most common algorithm is backtracking,
+                            which involves trying to place queens on the board row by row, backtracking when a conflict
+                            is found, and continuing until a solution is found.</p>
+                    </li>
+                    <li>
+                        <p align="justify">Can the n-Queen problem be solved for all values of n?<br>
+                            Ans: The n-Queen problem can be solved for all values of n, but the computational complexity
+                            of finding a solution increases rapidly as n increases. For large values of n, it may not be
+                            practical to find a solution using a brute-force algorithm.</p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+
+
+
+
+        <!-- Pagination -->
+        <div class="w3-center w3-padding-32">
+            <div class="w3-bar">
+                <a class="w3-button w3-hover-black" href="index.html">1</a>
+                <a class="w3-button w3-black" href="nQueen.html">2</a>
+                <a class="w3-button w3-hover-black" href="searching\linear.html">3</a>
+                <a class="w3-button w3-hover-black" href="searching\binary.html">4</a>
+                <a class="w3-button w3-hover-black" href="sorting\selection.html#">5</a>
+                <a class="w3-button w3-hover-black" href="LCS\LCS.html">»</a>
+            </div>
+        </div>
+
+        <!-- END MAIN -->
+    </div>
+
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
+
+

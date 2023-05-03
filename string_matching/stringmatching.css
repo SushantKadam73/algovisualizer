@@ -1,0 +1,133 @@
+
+h1,h2,h3,h5,h6 {
+    font-family: "Josefin Sans", sans-serif; color: #4CD4CB; font-weight: 700; 
+}
+
+h1{
+    background-color: #242424
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 10px;
+    border: 0px;
+    font-family: "Lexend", sans-serif; 
+    color: #ffffff;
+    background-color: #1C1D1D; 
+}
+
+
+select#algorithm {
+    display: inline;
+}
+
+a.sourcelink {
+    padding-left: 20px;
+}
+
+a.toggle {
+    display:block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table.strings {
+    border-collapse: collapse;
+}
+
+table.strings td {
+    width: 25px;
+    text-align:center
+}
+
+table.strings tr.label-row td {
+    font-size: smaller;
+}
+
+table.strings td.row-label {
+    font-size: medium;
+    font-weight: bold;
+    border-right: solid 1px lightgray;
+    padding-right: 5px;
+    text-align: right;
+}
+
+
+
+td.table-char {
+    font-family: monospace;
+    color: #4cd4cbff;
+    border: none;
+    font-size: 24px;
+    width: 15px;
+}
+
+td.current {
+    background-color: #861657ff;
+    color: white;
+}
+
+td.match {
+    background-color: #ffa69eff;
+    color: black;
+}
+
+
+
+div.display-area {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    outline: 1px solid lightgrey;
+}
+
+div.buttons {
+    display:inline-block;
+}
+/* 
+td.statlabel {
+    text-align: right;
+    border: 1px solid lightgrey;
+    padding: 5px;
+}
+
+td.stat {
+    padding: 10px;
+    width: 60px;
+    border: 1px solid lightgrey;
+    text-align: right;
+} */
+
+button.btn {
+    margin: 5px;
+    background-color: #ffa69eff;
+    color: black;
+}
+
+table.statstable {
+    display:inline-block;
+    padding: 15px 0px 10px 0px;
+}
+
+
+div.buttons {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div#plotArea {
+    padding-top: 15px;
+}
+
+div.comparisonsplot {
+    margin-top: -50px;
+}
+
+#range-slider {
+    width: 300px;
+}
+
+

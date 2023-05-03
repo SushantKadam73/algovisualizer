@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Josefin Sans", sans-serif; color: #4CD4CB; font-weight: 700; background-color: #242424 ;
+}
+
+html,
+body {
+    
+    font-family: "Lexend", sans-serif; color: #ffffff;
+}
+
+
+:root{
+    --animdur: 1s;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #1C1D1D;  
+}
+#grid {
+    margin: 0 auto 3% auto;
+    display: none;
+    width: 80vw;
+    max-width: 60vh;
+/*    height: 60vw;
+    max-height: 40vh;*/
+    font-size: 1rem;
+}
+.row {
+    display: flex;
+}
+.box {
+    background: #4cd4cbff;
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+    flex: 1 0 auto;
+    position: relative;
+}
+.box:after {
+    content: "";
+    float:left;
+    display: block;
+    padding-top: 100%;
+}
+.box .inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.box .innered {
+animation-name: show_number;
+animation-duration: 1s;
+animation-fill-mode: forwards;
+}
+@keyframes show_number{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.visited-box {
+    animation-name: vv;
+    animation-duration: var(--animdur);
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes vv {
+    /* 0%{background-color: #faecea;} */
+    100%{background-color: #aa4465ff;}
+}
+
+.checked {
+    animation-name: vvli;
+    animation-duration: var(--animdur);
+}
+
+.current {
+    animation-name: vvli;
+    animation-duration: var(--animdur);
+}
+
+@keyframes ch{
+    0% { outline: #ffa69eff solid 0px;}
+    100% { outline: #aa4465ff solid 5px; }
+}
+
+@keyframes cu{
+    0% { outline: #ffa69eff solid 0px;}
+    100% { outline: #aa4465ff solid 5px; }
+}
+
+
+.inputs{
+    /*background-color: #6b7a8f;*/
+    display: flex;
+    align-items: flex-start;
+    align-content: space-around;
+    flex-direction: row;
+    color: rgb(0, 0, 0);
+}
+
+#result{
+    text-align: center;
+    display:none;
+}
+
+#thelcs{
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+}
+#letters{
+    display: inline;
+    font-size: 20px;
+    font-weight: 900;
+}
+#letters p{
+    margin: auto 2px;
+}
+#desc{
+    font-size: 40px;
+    text-align: center;
+}
+#text_inputs{
+    margin-right: 20px;
+    
+}
+#text_inputs input{
+    width: 120px;
+    margin: auto 5px;
+    color: rgb(0, 0, 0);
+}
+.cbtn{
+    margin: 0 10px;
+}
+header{
+    background-color: #242424;
+    color: #4cd4cbff;
+    font-size: 2em;
+    text-align: center;
+    margin: 2%;
+    padding: 0.4% 0;
+}
+
+@media only screen and (max-width: 600px) {
+.inputs{
+    flex-direction: column;
+}
+
+#internal_parts{
+    flex-direction: column !important;
+
+}
+#buttons{
+    margin: 1% auto;
+}
+#text_inputs{
+    margin: 1% auto;
+}
+}
+
+
+.code {
+    direction: flex;
+    flex-direction: row;
+    width: 350px;
+    margin: 0 auto;
+    font-size: 1rem;
+    display: none;
+}
+
+
+.code ul{
+    list-style-type: none;
+}
+
+.code li{
+    padding: 1% 0;
+    padding-left: 10px;
+    /* background-color: #4cd4cbff; */
+    color: white;
+    
+}
+
+.visited-line{
+    animation-name: vvli;
+    animation-duration: var(--animdur);
+}
+
+@keyframes vvli {
+    /* 0%{background-color: #ffa69eff;}
+    50%{background-color: #aa4465ff;}
+    70%{background-color: #861657ff;}
+    100%{background-color: #4cd4cbff;} */
+
+    100%{background-color: #861657ff;}
+}
+
+#result p{
+    display: inline;
+}
+
+#internal_parts{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* slider styling*/
+#speedy{
+    margin: 2% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+#speedy p{
+    margin: auto 5px;
+    font-size: 20px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 15px;
+    border-radius: 5px;  
+    background: white;
+    outline: none;
+    border: lightgray 1px solid;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #4cd4cbff;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4cd4cbff;
+    cursor: pointer;
+  }
+
+  footer{
+      margin: 2% ;
+  }

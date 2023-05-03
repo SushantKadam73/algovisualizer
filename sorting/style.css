@@ -1,0 +1,477 @@
+@media (max-width: 576px) { .navmargin { margin: 0; } }
+@media (min-width: 1025px)
+ {
+   .navbar
+{
+  height:75px;
+  width: 100%;
+  flex-direction: row;
+	justify-content: space-between;
+}
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Josefin Sans", sans-serif; color: #4CD4CB; font-weight: 700;
+  background-color: #242424 ;
+}
+
+header {
+  background-color: #242424;
+  color: #4cd4cbff;
+  font-size: 2em;
+  text-align: center;
+  margin: 2%;
+  padding: 0.4% 0;
+}
+/* CSS HEX
+--melon: #ffa69eff;
+--raspberry-rose: #aa4465ff;
+--murrey: #861657ff;
+--turquoise: #4cd4cbff;
+--black: #000000ff; */
+
+
+html,
+body {
+  
+  font-family: "Lexend", sans-serif; color: #ffffff;
+}
+
+.intro
+{
+  text-align:center; 
+  color:white; 
+  font-size:1.3em;
+  word-wrap: break-word;
+}
+
+*{
+	margin:0px;
+	padding:0px;
+  box-sizing: border-box;
+  background-color: #1C1D1D;
+}
+body{
+  height: 100%;
+  width: 100%;
+  /* background-color:black;  */
+  position: relative;
+}
+
+
+/*hover animation by Sean McCaffery*/
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke:#aa4465ff;
+}
+
+.text {
+  color:white;
+    font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+  margin-left:80px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+
+
+}
+
+/*hover animation by Sean McCaffery*/
+
+/*array styling*/
+
+.description
+{
+  color:white;
+  border:0;
+  text-align: center;
+}
+.array_1d
+{
+ border: 1px solid white;	
+ text-align: center;
+}
+/*array styling*/
+
+
+/* refresh and reset control and other buttons styling*/
+.control_buttons
+{
+	  background-color:#aa4465ff;
+    border: none;
+    color: white;
+    padding: 6px 24px;
+    text-align: center;
+    font-size: 15px;
+	  cursor:pointer;
+	  /* border-radius: 15px; */
+}
+.reset:hover{background-color:#aa4465ff;}
+.refresh:hover{background-color: #aa4465ff;}
+
+/* refresh and reset control and other buttons styling*/
+
+
+
+/* Searh button styling*/
+.search_button
+{
+	  background-color:#aa4465ff;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    font-size: 15px;
+	  /* cursor:pointer;
+  	transition: all 0.5s; */
+  	margin: 5px;
+    width:100px;
+	
+}
+/* .search_button:hover {
+	  border:1px solid #aa4465ff;
+    background-color:#aa4465ff;
+    color: white;
+	  border-radius: 15px;
+} */
+
+/* .search_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.search_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.search_button:hover span {
+  padding-right: 25px;
+}
+
+.search_button:hover span:after {
+  opacity: 1;
+  right: 0;
+} */
+
+/* Searh button styling*/
+
+
+#anim
+{
+	color:white;
+	margin-left:20px;
+	
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+/*The tracing and details and log part styling*/
+#console
+{
+	font-size:15px;
+
+  width: 50%;
+  margin-right: 10%;
+
+}
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+/*The tracing and details and log part styling*/
+
+@media screen and (max-width: 600px) {
+  .nav_bar a:not(:first-child) {display: none;}
+  .nav_bar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+.sort_button
+{
+	background-color:#aa4465ff;
+    border:1px solid #aa4465ff;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    font-size: 16px;
+	cursor:pointer;
+	/* transition: all 0.5s; */
+	margin: 5px;
+    width:100px;
+	
+	
+}
+/* .sort_button:hover {
+	border:1px solid #aa4465ff;
+    background-color:#aa4465ff;
+    color: white;
+	border-radius: 15px;
+}
+
+.sort_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sort_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.sort_button:hover span {
+  padding-right: 25px;
+}
+
+.sort_button:hover span:after {
+  opacity: 1;
+  right: 0;
+} */
+.ext
+{
+	border-color:#aa4465ff;
+	color:white;
+}
+/* .box {
+  background: black;
+  background-clip: content-box;
+  width: 500px;
+  height: 300px;
+  margin: 20px auto;
+  padding: 20px 0;
+  position: relative;
+  
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 500px;
+    top: 20px;
+    bottom: 20px;
+    left: 0;
+    right: 0px;
+    background: #ddd;
+    z-index: -1;
+    transform: rotate(5deg);
+  }
+} */
+
+#top
+{
+  color:white;
+	border:1px solid white; 
+	border-collapse: collapse;
+  text-align:center;
+  width:3%;
+  height:6%;
+  
+}
+.push:hover
+{
+  background-color: #861657ff;
+}
+.pop:hover
+{
+  background-color: #861657ff;
+}
+
+
+
+/* the line animation to type text */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 22em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 158%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 16em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+/* end of animation to type text */
+
+/* footer*/
+.footnote {
+  color: white;
+  width: 100%;
+  text-align:center;
+
+}
+/*end of footer*/
+
+
+/*merge sort css*/
+
+.array1d
+{
+  border: 1px solid white;	
+  text-align: center;
+  background-clip: padding-box;
+  position: static;
+		
+}
+.noborder
+{
+  color:white;
+  text-align: center;
+  background-clip: padding-box;
+  position: static;
+}
+/*merge sort css*/
+
+
+
+
+/*selection sort css*/
+.temp_var
+{
+  border: 1px solid white;	
+  text-align: center;
+  
+}
+/*selection sort css*/
+
+/*toggle css*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*toggle css*/
+
+/*lbp css*/
+.imgpixel
+{
+  border: 1px solid white;
+}
+#pixels
+{
+  width: 20%;
+  text-align: center;
+}
+#output
+{
+  width :20%;
+  text-align: center;
+}
+#oa
+{
+  width:20%;
+}
+/*lbp css*/
+
