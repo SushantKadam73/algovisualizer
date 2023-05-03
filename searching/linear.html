@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+
+
+  <title>Linear Search</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="Favicon.png">
+</head>
+
+
+<body>
+  <div class="container">
+    <div id="anim">
+      <div>
+        <header>
+          <h1 class="h1" align="center">Linear Search Visualization</h1>
+        </header>
+
+        <div align="center">
+          <table class="table" id="array_1d">
+            <tr>
+              <th class="array1d">A[0]</th>
+              <th class="array1d">A[1]</th>
+              <th class="array1d">A[2]</th>
+              <th class="array1d">A[3]</th>
+              <th class="array1d">A[4]</th>
+              <th class="array1d">A[5]</th>
+              <th class="array1d">A[6]</th>
+              <th class="array1d">A[7]</th>
+              <th class="array1d">A[8]</th>
+              <th class="array1d">A[9]</th>
+              <th class="array1d">A[10]</th>
+            </tr>
+            <tr class="array_1d">
+              <td class="array1d">0</td>
+              <td class="array1d">1</td>
+              <td class="array1d">2</td>
+              <td class="array1d">3</td>
+              <td class="array1d">4</td>
+              <td class="array1d">5</td>
+              <td class="array1d">6</td>
+              <td class="array1d">7</td>
+              <td class="array1d">8</td>
+              <td class="array1d">9</td>
+              <td class="array1d">10</td>
+            </tr>
+            <tr class="description">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+
+        <div align="center">
+          <!----controls-->
+          <p class="p" id="key" style="font-size:20px;"></p>
+          <br>
+          <label style="font-size:15px;">Enter value to search : </label>
+          <input type="number" placeholder="search key" id="key_val" style="height:22px;color: white;"> &nbsp;
+          <button class="search_button" onclick="search()">Search</button>
+          <br><br>
+          <input class="control_buttons refresh" type="button" value="Refresh" onclick="refresh()"></input> &nbsp;&nbsp;
+          <input class="control_buttons reset" type="button" value="Reset" onclick="reset()"></input> &nbsp; &nbsp;
+          <input class="control_buttons reset" type="button" value="Pause" onclick="pause()"></input>
+
+        </div><br>
+      </div>
+
+      <div class="row">
+
+        <div class="container column">
+          <!----console-->
+          <div class="row" id="details">
+            <div class="column" id="console">
+              <r></r>
+              <p id="log" style="color:#ffa69eff; font-family:lexend ;"></p><br>
+              <p id="output" style="color:#ffa69eff; font-family:lexend ;"></p>
+            </div>
+
+            <br><br>
+
+            <div class=" container column" id="trace">
+
+              <div class="column" id="trace">
+
+                <h4>Pseudo Code</h4>
+                <ul type="none">
+                  <li id="line1">procedure linear_search (list, value)</li>
+                  <li id="line2">&nbsp;while i < n</li>
+                  <li id="line3"> &nbsp; &nbsp; &nbsp;if match item == value</li>
+                  <li id="line4"> &nbsp; &nbsp; &nbsp;&nbsp;return the item's location</li>
+                  <li id="line5"> &nbsp; &nbsp; &nbsp;i++</li>
+                  <li id="line6">end while</li>
+                  <li id="line7">end procedure</li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <script src="js/linearsearch.js"></script>
+</body>
+
+</html>
