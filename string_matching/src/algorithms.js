@@ -21,7 +21,7 @@
 // (function, externalName) pairs for all the implemented search functions) and
 // run (a function that is called to run a specific module).
 
-define(['naive', 'kmp', 'simpleboyermoore', 'boyermoore'], function (f_naive, f_kmp, f_simplebm, f_bm) {
+define(['naive', 'kmp'], function (f_naive, f_kmp) {
     var algorithms = {
         naive: function(pattern, text) {
             return f_naive(pattern, text);
@@ -31,22 +31,12 @@ define(['naive', 'kmp', 'simpleboyermoore', 'boyermoore'], function (f_naive, f_
         kmp: function(pattern, text) {
             return f_kmp(pattern, text);
         },
-
-        simpleboyermoore: function(pattern, text) {
-            return f_simplebm(pattern, text);
-        },
-
-        boyermoore: function(pattern, text) {
-            return f_bm(pattern, text);
-        }
     };
 
     return {
         list: [
             ['naive', "Naive"],
-            ['kmp', "KMP"],
-            ['simpleboyermoore', 'Boyer-Moore-Horspool'],
-            ['boyermoore', "Full Boyer-Moore"]],
+            ['kmp', "KMP"]],
         run: function (algorithm_name, pattern, text) {
             return algorithms[algorithm_name](pattern, text);
         }
